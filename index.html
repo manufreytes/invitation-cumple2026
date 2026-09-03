@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<title>Cumple de Manu 🎉</title>
+<meta name="description" content="Estás invitado/a al cumple de Manu — 19 de septiembre.">
+<meta name="theme-color" content="#2d1c0f">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎂</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="book" id="book">
+
+  <!-- PÁGINA 0: TAPA DEL LIBRO -->
+  <section class="page" id="cover">
+    <div class="glow"></div>
+    <div class="sparkles" aria-hidden="true"></div>
+    <div class="eyebrow">Guardá la fecha</div>
+    <div class="book-object" id="bookObject">
+      <div class="book-cover" id="bookCover">
+        <div class="spine"></div>
+        <div class="book-shine"></div>
+        <div class="book-title">Estás invitado/a<br>al cumple de<br><strong>Manu</strong> 🎂</div>
+      </div>
+      <div class="book-pages-edge"></div>
+    </div>
+    <div class="tap-hint">Tocá el libro para abrirlo →</div>
+  </section>
+
+  <!-- PÁGINA 1: FOTOS (título + visor, una por una, avance controlado por JS) -->
+  <section class="page page--flush" id="photos">
+    <h2 class="photos-title">Les dejo fotos mías</h2>
+
+    <div class="photo-viewer" id="photoViewer">
+      <div class="photo-slide" data-i="1"><img src="assets/fotos/foto1.jpg" alt="Foto 1"></div>
+      <div class="photo-slide" data-i="2"><img src="assets/fotos/foto2.jpg" alt="Foto 2"></div>
+      <div class="photo-slide" data-i="3"><img src="assets/fotos/foto3.jpg" alt="Foto 3"></div>
+      <div class="photo-slide" data-i="4"><img src="assets/fotos/foto4.jpg" alt="Foto 4"></div>
+      <div class="photo-slide" data-i="5"><img src="assets/fotos/foto5.jpg" alt="Foto 5"></div>
+      <div class="photo-slide" data-i="6"><img src="assets/fotos/foto6.jpg" alt="Foto 6"></div>
+      <div class="photo-slide" data-i="7"><img src="assets/fotos/foto7.jpg" alt="Foto 7"></div>
+      <div class="photo-slide" data-i="8"><img src="assets/fotos/foto8.jpg" alt="Foto 8"></div>
+      <div class="photo-slide" data-i="9"><img src="assets/fotos/foto9.jpg" alt="Foto 9"></div>
+      <div class="photo-slide" data-i="10"><img src="assets/fotos/foto10.jpg" alt="Foto 10"></div>
+      <div class="photo-slide" data-i="11"><img src="assets/fotos/foto11.jpg" alt="Foto 11"></div>
+      <div class="photo-slide" data-i="12"><img src="assets/fotos/foto12.jpg" alt="Foto 12"></div>
+      <div class="photo-slide" data-i="13"><img src="assets/fotos/foto13.jpg" alt="Foto 13"></div>
+      <div class="photo-slide photo-slide--gate" data-i="14">
+        <div class="gate-card">
+          <p class="gate-title">Antes de seguir</p>
+          <label class="gate-check">
+            <input type="checkbox" id="photosGateCheck">
+            <span>Vi las 13 fotos con detenimiento</span>
+          </label>
+          <button class="gate-next" id="photosGateBtn" type="button" disabled>Siguiente →</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-counter" id="carouselCounter"><span id="carouselIndex">1</span> / <span id="carouselTotal">13</span></div>
+    <div class="viewer-hint" id="viewerHint">deslizá o tocá para pasar ↑</div>
+  </section>
+
+  <!-- PÁGINA 3: VIDEO -->
+  <section class="page" id="video">
+    <div class="reveal">
+      <div class="eyebrow">Y por si fuera poco</div>
+      <h2>Mirá esto 🎥</h2>
+    </div>
+    <div class="video-frame">
+      <video controls playsinline poster="assets/video-poster.jpg" preload="metadata">
+        <source src="assets/video-cumple.mp4" type="video/mp4">
+        Tu navegador no puede reproducir este video.
+      </video>
+    </div>
+    <div class="scroll-cue">↓</div>
+  </section>
+
+  <!-- PÁGINA 4: LA IA DEL OUTFIT -->
+  <section class="page" id="ia">
+    <div class="ia-glow" aria-hidden="true"></div>
+    <div class="reveal ia-content">
+      <div class="eyebrow ia-eyebrow">Lo mejor de esta página</div>
+      <h2 class="ia-title">Tu asistente<br>de outfit 🤖</h2>
+      <p class="ia-text">
+        El dress code es <b>colores tierra</b> y va en serio — pero no me estén
+        mandando todos foto de qué se piensan poner para ver si está bien.
+        Les dejo acá una IA entrenada para asesorarlos con su outfit: le
+        pueden mandar fotos y preguntarle lo que quieran.
+      </p>
+      <a class="gem-btn-big" href="https://gemini.google.com/gem/1p8u3pGNC5uSavX8rI4oZjvn_P-OAfzL9?usp=sharing" target="_blank" rel="noopener">
+        🤖 Preguntale a la IA por tu outfit
+      </a>
+    </div>
+    <div class="scroll-cue">↓</div>
+  </section>
+
+  <!-- PÁGINA 5: INFO + RSVP -->
+  <section class="page" id="info">
+    <div class="invite-card reveal" id="inviteCard">
+      <div class="eyebrow">Ahora sí, la posta</div>
+      <h2>🎉 Cumple de Manu</h2>
+      <ul class="detail-list">
+        <li><span class="ico">📅</span><span><b>19 de septiembre</b></span></li>
+        <li><span class="ico">📍</span><span>En mi casa</span></li>
+        <li><span class="ico">🕘</span><span>A las <b>21:00 hs</b></span></li>
+        <li><span class="ico">🍽️</span><span>No me pregunten por el menú, todavía no me decidí</span></li>
+        <li><span class="ico">🍾</span><span>Yo pongo alcohol, pero cada uno trae <b>una botella de lo que más le guste</b></span></li>
+      </ul>
+
+      <div class="dress-code">
+        <span class="ico">👗</span> <b>Dress code: colores tierra</b><span class="tag">OBLIGATORIO</span>
+      </div>
+
+      <div class="rsvp">
+        <h3>¿Vas a venir?</h3>
+        <p class="rsvp-note">Confirmá acá nomás — no hace falta que me mandes mensaje ni nada, con esto ya me queda anotado 🙌</p>
+        <input type="text" id="rsvpName" placeholder="Tu nombre" maxlength="20">
+        <div class="rsvp-buttons">
+          <button class="btn-yes" id="btnYes" type="button">✅ Sí, voy!</button>
+          <button class="btn-no" id="btnNo" type="button">❌ No puedo</button>
+        </div>
+        <div class="rsvp-status" id="rsvpStatus"></div>
+      </div>
+
+      <div class="footer-note">Hecho con cariño (y colores tierra) para vos.</div>
+    </div>
+  </section>
+
+</div>
+
+<div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
